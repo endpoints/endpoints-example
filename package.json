@@ -37,6 +37,10 @@
     "express": "^4.10.6",
     "express-routebuilder": "^2.0.0",
     "knex": "^0.7.3",
-    "sqlite3": "^3.0.4"
+    "sqlite3": "^3.0.4",
+    "fantasy-database": "^1.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.5.11"
   }
 }
