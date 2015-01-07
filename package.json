@@ -32,8 +32,8 @@
   "dependencies": {
     "body-parser": "^1.10.0",
     "bookshelf": "^0.7.9",
-    "endpoints": "git://github.com/endpoints/endpoints.git#30412377f82d4abd862106b6bc55b655504a964b",
-    "endpoints-source-bookshelf": "git://github.com/endpoints/endpoints-source-bookshelf.git#a5820e29ad8a3101f487d3ad23b6884fa7c9d04c",
+    "endpoints": "git://github.com/endpoints/endpoints.git",
+    "endpoints-source-bookshelf": "git://github.com/endpoints/endpoints-source-bookshelf.git",
     "express": "^4.10.6",
     "express-routebuilder": "^2.0.0",
     "knex": "^0.7.3",
