@@ -8,7 +8,7 @@ const instanceProps = {
 };
 
 const classProps = {
-  resourceName: 'authors',
+  typeName: 'authors',
   columns: [
     'id',
     'name',

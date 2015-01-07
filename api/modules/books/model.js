@@ -19,7 +19,7 @@ const instanceProps = {
 };
 
 const classProps = {
-  resourceName: 'books',
+  typeName: 'books',
   columns: [
     'id',
     'author_id',

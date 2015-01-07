@@ -8,7 +8,7 @@ const instanceProps = {
 };
 
 const classProps = {
-  resourceName: 'series',
+  typeName: 'series',
   columns: [
     'id',
     'title'
