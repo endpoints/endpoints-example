@@ -3,7 +3,9 @@ const host = process.env.HOST || '0.0.0.0';
 const express = require('express');
 const app = express();
 
-app.use(require('./api'));
+app.use(express.static(__dirname+'/ember'));
+
+app.use('/api', require('./api'));
 
 app.listen(port, host);
 

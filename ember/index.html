@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Endpoints Example</title>
+</head>
+<body>
+  <script type="text/x-handlebars">
+    <h2>Welcome to Ember.js</h2>
+    <ul>
+      <li>{{#link-to 'series'}}series{{/link-to}}</li>
+      <li>{{#link-to 'authors'}}authors{{/link-to}}</li>
+      <li>{{#link-to 'books'}}books{{/link-to}}</li>
+      <li>{{#link-to 'chapters'}}chapters{{/link-to}}</li>
+    </ul>
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="series">
+    <h2>Series<h2>
+    <ul>
+      {{#each series in model}}
+        <li>{{series.title}}
+          {{#if series.books}}
+            <strong>Books</strong>
+            <ul>
+              {{#each book in model.books}}
+                <li>{{book.title}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" id="authors">
+    <h2>Authors<h2>
+    <ul>
+      {{#each author in model}}
+        <li>{{author.name}}
+          {{#if author.books}}
+            <br>
+            <strong>Books</strong>
+            <ul>
+              {{#each book in model.books}}
+                hi
+                <li>{{book.title}}</li>
+              {{/each}}
+            </ul>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <script type="text/x-handlebars" id="books">
+    <h2>Books<h2>
+      <ul>
+        {{#each book in model}}
+          <li>{{book.title}} by {{book.author.name}}
+            {{#if book.chapters}}
+              <br>
+              <strong>Chapters</strong>
+              <ul>
+                {{#each chapter in model.chapters}}
+                  <li>{{chapter.title}}</li>
+                {{/each}}
+              </ul>
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
+  </script>
+
+  <script type="text/x-handlebars" id="chapters">
+    <h2>Chapters<h2>
+    <ul>
+      {{#each item in model}}
+      <li>{{item}}</li>
+      {{/each}}
+    </ul>
+  </script>
+
+  <script src="vendor/jquery-2.1.3.js"></script>
+  <script src="vendor/handlebars-2.0.0.js"></script>
+  <script src="vendor/ember-1.9.1.js"></script>
+  <script src="vendor/ember-data-beta-14.1.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
