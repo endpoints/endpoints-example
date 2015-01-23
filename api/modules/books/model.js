@@ -50,19 +50,12 @@ const classProps = {
       return qb.whereIn('title', value);
     }
   },
-  relations: {
-    chapters: 'chapters',
-    first_chapter: 'firstChapter',
-    /* unsupported
-    specificChapter: function (params) {
-      return this.hasMany('../chapters/model').query(function (qb) {
-
-      });
-    }
-    */
-    series: 'series',
-    author: 'author'
-  }
+  relations: [
+    'chapters',
+    'firstChapter',
+    'series',
+    'author'
+  ]
 };
 
 module.exports = BaseModel.extend(instanceProps, classProps);
