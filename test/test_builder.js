@@ -12,5 +12,5 @@ for(var i = 0; i < resources.length; i++) {
   var resource = resources[i];
   var mocks = require('./mocks/'+resource);
 
-  fs.writeFileSync('endpoints/' + resource + "_test.js", template({resource: resource, mocks: mocks}));
+  fs.writeFileSync(resource + "_test.js", template({resource: resource, mocks: mocks}));
 }
