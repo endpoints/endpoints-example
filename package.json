@@ -41,6 +41,14 @@
     "fantasy-database": "^1.0.0"
   },
   "devDependencies": {
-    "jshint": "^2.5.11"
+    "expect.js": "^0.3.1",
+    "grunt": "^0.4.5",
+    "grunt-express-server": "^0.4.19",
+    "grunt-mocha-test": "^0.12.7",
+    "jshint": "^2.5.11",
+    "load-grunt-tasks": "^3.1.0",
+    "mocha": "^2.1.0",
+    "superagent": "^0.21.0",
+    "underscore": "^1.7.0"
   }
 }
