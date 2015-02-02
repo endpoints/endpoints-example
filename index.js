@@ -3,7 +3,7 @@ const host = process.env.HOST || '0.0.0.0';
 const express = require('express');
 const app = express();
 
-app.use(require('./api'));
+app.use(require('./src'));
 
 app.listen(port, host);
 
