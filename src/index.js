@@ -6,7 +6,8 @@ const Endpoints = require('endpoints');
 const bodyParser = require('body-parser');
 const routeBuilder = require('express-routeBuilder');
 
-const resources = fs.readdirSync(__dirname+'/modules');
+const modulePath = path.join(__dirname, 'modules');
+const resources = fs.readdirSync(modulePath);
 
 const app = express();
 
@@ -14,13 +15,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const Example = new Endpoints.Application({
+  searchPaths: [modulePath],
   routeBuilder: function (routes, prefix) {
     return routeBuilder(express.Router(), routes, prefix);
   }
 });
 
 resources.forEach(function (resource) {
-  Example.register(path.join(__dirname, 'modules', resource, 'routes.js'));
+  Example.register(resource);
   app.use(Example.endpoint(resource));
 });
 
