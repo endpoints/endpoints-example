@@ -13,7 +13,7 @@ exports.up = function (knex) {
     createTable('books', function (t) {
       t.increments('id');
       t.integer('author_id').notNullable().references('id').inTable('authors');
-      t.integer('series_id').notNullable().references('id').inTable('series');
+      t.integer('series_id').references('id').inTable('series');
       t.date('date_published').notNullable();
       t.text('title');
     }).
