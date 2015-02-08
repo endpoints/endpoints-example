@@ -1,5 +1,5 @@
 var mock_resource = {
-  "series: {
+  "series": {
     title: "best technology writing 2015",
   }
 };

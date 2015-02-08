@@ -5,7 +5,7 @@ var mock_resource = {
   }
 };
 var mock_update = {
-  "chapters":
+  "chapters": {
     title: "Once upon a time in a galaxy far far away",
     book_id: 1,
   }
