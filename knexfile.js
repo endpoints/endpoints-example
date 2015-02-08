@@ -1,7 +1,14 @@
+const path = require('path');
+
 module.exports = {
-  client: 'sqlite3',
-  debug: false,
-  connection: {
-    filename: ':memory:'
+  development: {
+    client: 'sqlite3',
+    connection: {
+      filename: ":memory:"
+    },
+    directory: path.resolve(__dirname, '/migrations'),
+    migrations: {
+      tableName: 'migrations'
+    }
   }
 };
