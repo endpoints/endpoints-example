@@ -1,4 +1,4 @@
-const DB = require('../api/classes/database');
+const DB = require('../src/classes/database');
 const config = require('../knexfile');
 
 module.exports = {
