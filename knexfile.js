@@ -4,9 +4,9 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: ":memory:"
+      filename: "./db.sqlite"
     },
-    directory: path.resolve(__dirname, '/migrations'),
+    directory: path.resolve('./migrations'),
     migrations: {
       tableName: 'migrations'
     }
