@@ -1,11 +1,15 @@
 var mock_resource = {
-  name: "Ashley Williams",
-  date_of_birth: "may 5, 1986"
+  "authors": {
+    name: "Ashley Williams",
+    date_of_birth: "1986-05-05"
+  }
 };
 var mock_update = {
-  name: "Ashley Williams",
-  date_of_birth: "may 5, 1986",
-  date_of_death: "january 30, 2015"
+  "authors": {
+    name: "Ashley Williams",
+    date_of_birth: "1986-05-05",
+    date_of_death: " 2015-01-30"
+  }
 };
 var update_attr = 'date_of_death';
 

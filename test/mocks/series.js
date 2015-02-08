@@ -1,8 +1,12 @@
 var mock_resource = {
-  title: "best technology writing 2015",
+  "series: {
+    title: "best technology writing 2015",
+  }
 };
 var mock_update = {
-  title: "best tech writing 2015"
+  "series": {
+    title: "best tech writing 2015"
+  }
 };
 var update_attr = 'title';
 

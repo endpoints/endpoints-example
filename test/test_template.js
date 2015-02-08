@@ -20,8 +20,8 @@ describe('piep-api server', function(){
         superagent.post(collection_url)
           .send(mock_resource)
           .end(function(e, res){
-            expect(e).to.equal(null);
-            id = res.body.id;
+            expect(res.status).to.equal(201);
+            id = res.body[resource].id;
             element_url = collection_url + '/' + id;
             done();
           });
@@ -32,7 +32,7 @@ describe('piep-api server', function(){
       superagent.get(collection_url)
         .end(function(e, res){
           expect(e).to.eql(null);
-          expect(res.body.map(function(item){return item.id;})).to.contain(id);
+          expect(res.body[resource].map(function(item){return item.id;})).to.contain(id);
           done();
         });
     });

@@ -1,10 +1,14 @@
 var mock_resource = {
-  title: "The Beginning",
-  book_id: 1,
+  "chapters" : {
+    title: "The Beginning",
+    book_id: 1,
+  }
 };
 var mock_update = {
-  title: "Once upon a time in a galaxy far far away",
-  book_id: 1,
+  "chapters":
+    title: "Once upon a time in a galaxy far far away",
+    book_id: 1,
+  }
 };
 var update_attr = 'title';
 
