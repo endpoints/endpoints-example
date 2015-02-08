@@ -4,7 +4,7 @@ const expect = require('expect.js');
 const config = require('./config');
 const DB = require('./db_utils');
 
-describe('piep-api server', function(){
+describe('API server', function(){
   var resource = "<%= resource %>";
   var mock_resource = <%= JSON.stringify(mocks.mock_resource) %>;
   var mock_update = <%= JSON.stringify(mocks.mock_update) %>;
