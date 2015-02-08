@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 const Endpoints = require('endpoints');
 const bodyParser = require('body-parser');
-const routeBuilder = require('express-routeBuilder');
+const routeBuilder = require('express-routebuilder');
 
 const modulePath = path.join(__dirname, 'modules');
 const resources = fs.readdirSync(modulePath);
