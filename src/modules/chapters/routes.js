@@ -6,7 +6,8 @@ module.exports = {
   },
   get: {
     '/': controller.read(),
-    '/:id': controller.read({one: true})
+    '/:id': controller.read({one: true}),
+    '/:id/:relation': controller.readRelation()
   },
   put: {
     '/:id': controller.update()

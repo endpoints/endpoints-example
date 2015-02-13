@@ -22,7 +22,15 @@ exports.up = function (knex) {
       t.integer('book_id').notNullable().references('id').inTable('book');
       t.text('title').notNullable();
       t.integer('ordering').notNullable();
-    })
+    }).
+    createTable('stores', function (t) {
+      t.increments('id');
+      t.text('name').notNullable();
+    }).
+    createTable('books_stores', function (t) {
+      t.integer('book_id').notNullable().references('id').inTable('books');
+      t.integer('store_id').notNullable().references('id').inTable('stores');
+    });
 };
 
 exports.down = function (knex) {

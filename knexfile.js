@@ -1,6 +1,6 @@
 module.exports = {
   client: 'sqlite3',
-  debug: false,
+  debug: true,
   connection: {
     filename: ':memory:'
   }
