@@ -31,9 +31,6 @@ const classProps = {
     'title'
   ],
   filters: {
-    id: function (qb, value) {
-      return qb.whereIn('id', value);
-    },
     author_id: function (qb, value) {
       return qb.whereIn('author_id', value);
     },

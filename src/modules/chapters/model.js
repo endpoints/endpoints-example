@@ -16,9 +16,6 @@ const classProps = {
     'ordering'
   ],
   filters: {
-    id: function (qb, value) {
-      return qb.whereIn('id', value);
-    },
     book_id: function (qb, value) {
       return qb.whereIn('book_id', value);
     },

@@ -14,9 +14,6 @@ const classProps = {
     'title'
   ],
   filters: {
-    id: function (qb, value) {
-      return qb.whereIn('id', value);
-    },
     title: function (qb, value) {
       return qb.whereIn('title', value);
     }
