@@ -15,6 +15,9 @@ const instanceProps = {
     return this.hasMany(require('../chapters/model')).query(function (qb) {
       qb.where('ordering', 1);
     });
+  },
+  stores: function () {
+    return this.belongsToMany(require('../stores/model'));
   }
 };
 
@@ -54,7 +57,8 @@ const classProps = {
     'chapters',
     'firstChapter',
     'series',
-    'author'
+    'author',
+    'stores'
   ]
 };
 
