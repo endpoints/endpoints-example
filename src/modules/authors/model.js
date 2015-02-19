@@ -9,7 +9,7 @@ const instanceProps = {
 
 const classProps = {
   typeName: 'authors',
-  columns: [
+  fields: [
     'id',
     'name',
     'date_of_birth',

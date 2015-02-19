@@ -12,7 +12,9 @@ const resources = fs.readdirSync(modulePath);
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+app.use(bodyParser.json({
+  type: ['application/json', 'application/vnd.api+json']
+}));
 
 const Example = new Endpoints.Application({
   searchPaths: [modulePath],
@@ -25,6 +27,7 @@ resources.forEach(function (resource) {
   Example.register(resource);
   app.use(Example.endpoint(resource));
 });
+
 
 app.get('/', function (request, response) {
   response.set('Content-Type', 'application/json');

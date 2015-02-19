@@ -23,7 +23,7 @@ const instanceProps = {
 
 const classProps = {
   typeName: 'books',
-  columns: [
+  fields: [
     'id',
     'author_id',
     'series_id',
