@@ -55,7 +55,10 @@ const classProps = {
       return qb.where('date_of_birth', '>', value);
     }
   },
-  relations: ['books']
+  relations: [
+    'books',
+    'books.chapters'
+  ]
 };
 
 module.exports = BaseModel.extend(instanceProps, classProps);
