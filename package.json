@@ -1,6 +1,6 @@
 {
   "name": "endpoints-example",
-  "description": "An example API using Endpoints.",
+  "description": "an example api written using endpoints",
   "private": true,
   "homepage": "https://github.com/endpoints/example",
   "author": {

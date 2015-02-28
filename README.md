@@ -1,5 +1,5 @@
 # endpoints-example
-> An example API using Endpoints.
+> an example api written using endpoints
 
 # Setup Instructions
 
