@@ -1,18 +1,24 @@
 const controller = require('./controller');
-const booksController = require('../books/controller');
-const chaptersController = require('../chapters/controller');
+const schema = require('./schema');
 
 module.exports = {
   post: {
-    '/': controller.create({method: 'createWithRandomBook'})
+    '/': controller.create({
+      method: 'createWithRandomBook',
+      validate: schema
+    })
   },
   get: {
     '/': controller.read(),
-    '/:id': controller.read({one: true}),
+    '/:id': controller.read({
+      one: true
+    }),
     '/:id/:relation': controller.readRelation()
   },
   put: {
-    '/:id': controller.update()
+    '/:id': controller.update({
+      validate: schema
+    })
   },
   delete: {
     '/:id': controller.destroy()
