@@ -1,10 +1,12 @@
 const controller = require('./controller');
-const booksController = require('../books/controller');
-const chaptersController = require('../chapters/controller');
+const schema = require('./schema');
 
 module.exports = {
   post: {
-    '/': controller.create({method: 'createWithRandomBook'})
+    '/': controller.create({
+      method: 'createWithRandomBook',
+      validate: schema
+    })
   },
   get: {
     '/': controller.read(),
@@ -12,7 +14,9 @@ module.exports = {
     '/:id/:relation': controller.read()
   },
   put: {
-    '/:id': controller.update()
+    '/:id': controller.update({
+      validate: schema
+    })
   },
   delete: {
     '/:id': controller.destroy()
