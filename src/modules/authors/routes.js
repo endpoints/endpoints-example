@@ -9,7 +9,7 @@ module.exports = {
   get: {
     '/': controller.read(),
     '/:id': controller.read({one: true}),
-    '/:id/:relation': controller.readRelation()
+    '/:id/:relation': controller.read()
   },
   put: {
     '/:id': controller.update()
