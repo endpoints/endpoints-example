@@ -8,7 +8,7 @@ module.exports = {
   },
   get: {
     '/': controller.read(),
-    '/:id': controller.read({one: true}),
+    '/:id': controller.read(),
     '/:id/:relation': controller.read()
   },
   put: {
