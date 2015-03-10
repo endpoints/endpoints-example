@@ -13,7 +13,7 @@ module.exports = {
     '/:id': controller.read(),
     '/:id/:relation': controller.read()
   },
-  put: {
+  patch: {
     '/:id': controller.update({
       validate: schema
     })
