@@ -30,6 +30,7 @@
     "lint": "jshint index.js lib"
   },
   "dependencies": {
+    "bluebird": "^2.9.13",
     "body-parser": "^1.10.0",
     "bookshelf": "^0.7.9",
     "cli-table": "^0.3.1",
