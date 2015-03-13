@@ -1,7 +1,7 @@
 const Endpoints = require('endpoints');
 
 module.exports = new Endpoints.Controller({
-  source: new Endpoints.BookshelfSource({
+  adapter: new Endpoints.BookshelfAdapter({
     model: require('./model')
   })
 });
