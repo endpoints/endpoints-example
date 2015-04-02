@@ -1,7 +1,7 @@
-const Endpoints = require('endpoints');
+const API = require('../../classes/api');
+const schema = require('./schema');
 
-module.exports = new Endpoints.Controller({
-  adapter: new Endpoints.BookshelfAdapter({
-    model: require('./model')
-  })
+module.exports = new API.Controller({
+  model: require('./model'),
+  validate: schema
 });

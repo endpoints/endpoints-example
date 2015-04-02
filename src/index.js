@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const express = require('express');
-const Endpoints = require('endpoints');
 const bodyParser = require('body-parser');
 const routeBuilder = require('express-routebuilder');
 
@@ -11,32 +10,27 @@ const resources = fs.readdirSync(modulePath);
 
 const app = express();
 
+const API = require('./classes/api');
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({
   type: ['application/json', 'application/vnd.api+json']
 }));
 
-const Example = new Endpoints.Application({
-  searchPaths: [modulePath],
-  routeBuilder: function (routes, prefix) {
-    return routeBuilder(express.Router(), routes, prefix);
-  }
-});
-
 resources.forEach(function (resource) {
-  Example.register(resource);
-  app.use(Example.endpoint(resource));
+  API.register(resource);
+  app.use(API.endpoint(resource));
 });
-
 
 app.get('/', function (request, response) {
   response.set('Content-Type', 'application/json');
-  response.send(JSON.stringify(Example.index(), null, 2));
+  response.send(JSON.stringify(API.index(), null, 2));
 });
 
+/* currently non functional
 var Table = require('cli-table');
 var table = new Table({head: ['resource', 'includes', 'filters']});
-Example.manifest().forEach(function (resource) {
+API.manifest().forEach(function (resource) {
   table.push([
     resource.url,
     resource.includes.join(',')||'-',
@@ -44,5 +38,5 @@ Example.manifest().forEach(function (resource) {
   ]);
 });
 console.log(table.toString());
-
+*/
 module.exports = app;
