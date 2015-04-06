@@ -37,7 +37,7 @@
     "endpoints": "endpoints/endpoints#master",
     "express": "^4.10.6",
     "express-routebuilder": "^2.1.0",
-    "fantasy-database": "^1.0.0",
+    "fantasy-database": "endpoints/fantasy-database#master",
     "knex": "^0.7.3",
     "sqlite3": "^3.0.4"
   },

@@ -4,20 +4,24 @@ const schema = require('./schema');
 module.exports = {
   post: {
     '/': controller.create({
-      validate: schema
-    })
+      schema: schema
+    }),
+    '/:id/links/:relation': controller.update()
   },
   get: {
     '/': controller.read(),
     '/:id': controller.read(),
-    '/:id/:relation': controller.read()
+    '/:id/:related': controller.read(),
+    '/:id/links/:relation': controller.read()
   },
-  put: {
+  patch: {
     '/:id': controller.update({
-      validate: schema
-    })
+      schema: schema
+    }),
+    '/:id/links/:relation': controller.update()
   },
   delete: {
-    '/:id': controller.destroy()
+    '/:id': controller.destroy(),
+    '/:id/links/:relation': controller.update()
   }
 };

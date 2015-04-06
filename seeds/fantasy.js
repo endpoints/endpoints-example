@@ -2,10 +2,11 @@ const fantasyDatabase = require('fantasy-database');
 
 exports.seed = function (knex, Promise) {
   var tables = [
+    'series',
+    'photos',
     'authors',
     'books',
     'chapters',
-    'series',
     'stores',
     'books_stores'
   ];

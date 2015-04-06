@@ -4,6 +4,9 @@ const instanceProps = {
   tableName: 'authors',
   books: function () {
     return this.hasMany(require('../books/model'));
+  },
+  photos: function () {
+    return this.morphMany(require('../photos/model'), 'imageable');
   }
 };
 
@@ -51,7 +54,8 @@ const classProps = {
   },
   relations: [
     'books',
-    'books.chapters'
+    'books.chapters',
+    'photos'
   ]
 };
 
