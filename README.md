@@ -10,7 +10,7 @@
   - [http://localhost:8080](http://localhost:8080)
   - [http://localhost:8080/authors](http://localhost:8080/authors)
   - [http://localhost:8080/authors/1](http://localhost:8080/authors/1)
-  - [http://localhost:8080/authors/1,2](http://localhost:8080/authors/1,2)
+  - [http://localhost:8080/authors/?filter[id]=1,2](http://localhost:8080/authors/?filter[id]=1,2)
   - [http://localhost:8080/authors?include=books](http://localhost:8080/authors?include=books)
   - [http://localhost:8080/authors?filter[alive]=true](http://localhost:8080/authors?filter[alive]=true)
   - [http://localhost:8080/authors?filter[dead]=true](http://localhost:8080/authors?filter[dead]=true)
