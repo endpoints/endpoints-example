@@ -1,5 +1,7 @@
 const config = require('../../knexfile');
 
+require('fs').unlink(config.connection.filename);
+
 const Knex = require('knex')(config);
 const Bookshelf = require('bookshelf')(Knex);
 
