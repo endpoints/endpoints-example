@@ -1,6 +1,9 @@
 const config = require('../../knexfile');
 
-require('fs').unlink(config.connection.filename);
+// reset database at each startup
+try {
+  require('fs').unlinkSync(config.connection.filename);
+} catch (e) {}
 
 const Knex = require('knex')(config);
 const Bookshelf = require('bookshelf')(Knex);
