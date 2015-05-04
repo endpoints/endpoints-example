@@ -1,7 +1,10 @@
 const controller = require('./controller');
 const schema = require('./schema');
 
-module.exports = {
+const thisFolderName = __dirname.split('/').pop();
+
+exports.basePath = thisFolderName;
+exports.map = {
   post: {
     '/': controller.create({
       schema: schema

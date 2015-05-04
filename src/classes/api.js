@@ -11,6 +11,7 @@ module.exports = new Endpoints.Application({
     return routeBuilder(express.Router(), routes, prefix);
   },
   Controller: Endpoints.Controller.extend({
+    baseUrl: '/v1',
     store: Endpoints.Store.bookshelf,
     format: Endpoints.Format.jsonapi,
     validators: [Endpoints.ValidateJsonSchema]

@@ -22,21 +22,13 @@ resources.forEach(function (resource) {
   app.use(API.endpoint(resource));
 });
 
-app.get('/', function (request, response) {
+app.get('/v1', function (request, response) {
   response.set('Content-Type', 'application/json');
   response.send(JSON.stringify(API.index(), null, 2));
 });
 
-/* currently non functional
-var Table = require('cli-table');
-var table = new Table({head: ['resource', 'includes', 'filters']});
-API.manifest().forEach(function (resource) {
-  table.push([
-    resource.url,
-    resource.includes.join(',')||'-',
-    resource.filters.join(',')||'-'
-  ]);
+app.get('/', function (request, response) {
+  response.redirect('/v1');
 });
-console.log(table.toString());
-*/
+
 module.exports = app;

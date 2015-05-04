@@ -1,6 +1,8 @@
+const thisFolderName = __dirname.split('/').pop();
+
 const API = require('../../classes/api');
-const schema = require('./schema');
 
 module.exports = new API.Controller({
-  model: require('./model')
+  model: require('./model'),
+  basePath: thisFolderName
 });
