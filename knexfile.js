@@ -3,5 +3,10 @@ module.exports = {
   debug: true,
   connection: {
     filename: 'dev.db'
+  },
+  pool: {
+    afterCreate: function (conn, cb) {
+      conn.run('PRAGMA foreign_keys = ON', cb);
+    }
   }
 };
