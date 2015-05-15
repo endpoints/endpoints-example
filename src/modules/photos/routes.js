@@ -1,15 +1,12 @@
 const controller = require('./controller');
 const schema = require('./schema');
 
-const thisFolderName = __dirname.split('/').pop();
-
-exports.basePath = thisFolderName;
 exports.map = {
   post: {
     '/': controller.create({
       schema: schema
     }),
-    '/:id/links/:relation': controller.update()
+    '/:id/links/:relation': controller.createRelation()
   },
   get: {
     '/': controller.read(),
@@ -21,10 +18,10 @@ exports.map = {
     '/:id': controller.update({
       schema: schema
     }),
-    '/:id/links/:relation': controller.update()
+    '/:id/links/:relation': controller.updateRelation()
   },
   delete: {
     '/:id': controller.destroy(),
-    '/:id/links/:relation': controller.update()
+    '/:id/links/:relation': controller.destroyRelation()
   }
 };

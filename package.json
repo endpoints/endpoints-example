@@ -34,7 +34,7 @@
     "body-parser": "^1.10.0",
     "bookshelf": "^0.7.9",
     "cli-table": "^0.3.1",
-    "endpoints": "endpoints/endpoints#master",
+    "endpoints": "^0.8.0",
     "express": "^4.10.6",
     "express-routebuilder": "^2.1.0",
     "fantasy-database": "endpoints/fantasy-database#master",
