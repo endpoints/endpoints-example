@@ -12,7 +12,7 @@ module.exports = {
         format: 'date-time'
       },
       links: {
-        author: {
+        book: {
           type: 'string'
         }
       }
