@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const routeBuilder = require('express-routebuilder');
+const cors = require('cors');
 
 const modulePath = path.join(__dirname, 'modules');
 const resources = fs.readdirSync(modulePath);
@@ -12,6 +13,7 @@ const app = express();
 
 const API = require('./classes/api');
 
+app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json({
   type: ['application/json', 'application/vnd.api+json']
