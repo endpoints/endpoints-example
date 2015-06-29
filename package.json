@@ -1,7 +1,6 @@
 {
   "name": "endpoints-example",
   "description": "an example api written using endpoints",
-  "private": true,
   "homepage": "https://github.com/endpoints/example",
   "author": {
     "name": "Tyler Kellen",
