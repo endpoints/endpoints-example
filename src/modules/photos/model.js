@@ -2,6 +2,7 @@ const BaseModel = require('../../classes/base_model');
 
 const instanceProps = {
   tableName: 'photos',
+  hasTimestamps: true,
   imageable: function () {
     return this.morphTo(
       'imageable',
