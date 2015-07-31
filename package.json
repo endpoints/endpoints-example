@@ -31,14 +31,14 @@
   "dependencies": {
     "bluebird": "^2.9.13",
     "body-parser": "^1.10.0",
-    "bookshelf": "^0.7.9",
+    "bookshelf": "^0.8.1",
     "cli-table": "^0.3.1",
     "cors": "^2.5.2",
     "endpoints": "^0.9.0",
     "express": "^4.10.6",
     "express-routebuilder": "^2.1.0",
     "fantasy-database": "endpoints/fantasy-database#master",
-    "knex": "^0.8.0",
+    "knex": "^0.8.6",
     "sqlite3": "^3.0.4"
   },
   "devDependencies": {
