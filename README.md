@@ -21,3 +21,5 @@
   - [http://localhost:8080/v1/books?filter[published_after]=1990-01-01](http://localhost:8080/v1/books?filter[published_after]=1990-01-01)
   - [http://localhost:8080/v1/chapters?filter[id]=1](http://localhost:8080/v1/chapters?filter[id]=1)
   - [http://localhost:8080/v1/chapters/1](http://localhost:8080/v1/chapters/1)
+
+For more details on how to interact with this API, see the [JSON-API Specification](http://jsonapi.org)
